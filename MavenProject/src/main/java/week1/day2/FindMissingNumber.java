@@ -1,35 +1,33 @@
 package week1.day2;
+import java.util.Arrays;
 
-import java.util.Scanner;
 
-public class FindMissingNumber {
 
-	public static void main(String args[])   
-		   {  
-		       Scanner sc=new Scanner(System.in);
+public class FindMissingNumber
+{
 
-		      int n;    //Declare array size
-		      System.out.println("Enter the total number of elements ");
-		      n=sc.nextInt();     //Initialize array size
-
-		      int arr[]=new int[n];   //Declare array
-		      System.out.println("Enter the elements of the array ");
-		      for(int i=0; i<n ;i++)     //Initialize array
-		      {
-		          arr[i]=sc.nextInt();
-		      }
-		      
-		      int sum=(n+1)*(n+2)/2;   //Calculate the expected sum of all the elements from 1 to n
-		      for(int i=0;i<n;i++)
-		      {
-		          sum=sum-arr[i]; //Subtract each element from the sum
-		      }
-		      System.out.println("Missing Element is "+sum);  //Print the missing element
-		   }
-		}
+public static void main(String[] args)
+{
+	int[] num= {1,3,2,4,6};
+	Arrays.sort(num);
+	System.out.println("The missing number is:");
+	
+	for(int i= num[0] ;i<num.length;i++)
+	{
+	if(i+1 != num[i]) {
+		System.out.println(i+1);
+	}
+		
+	}
+}	
+}
+		
+		       
+		   
+		
+	
 
 		// TODO Auto-generated method stub
 
-	}
+	
 
-}
