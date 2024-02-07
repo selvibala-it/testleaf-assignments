@@ -1,21 +1,30 @@
+package week1.day2;
 import java.util.*;
 
-package week1.day2;
 public class FindIntersection {
-   public static void main(String args[]) {
-      HashSet <String> set1 = new HashSet <String>();
-      HashSet <String> set2 = new HashSet <String>();
-      set1.add("Mat");
-      set1.add("Sat");
-      set1.add("Cat");
-      System.out.println("Set1 = "+ set1);
-      set2.add("Mat");
-      set2.add("Cat");
-      set2.add("Fat");
-      set2.add("Hat");
-      System.out.println("Set2 = "+ set2);
-      set1.retainAll(set2);
-      System.out.println("Intersection = "+ set1);
+   public static void main(String args[]) { 
+	   
+	   int [] arr1 = {3,2,11,4,6,7};
+	   int [] arr2 = {1,2,8,4,9,7};
+
+	    ArrayList result = new ArrayList();
+ 
+	    for(int i=0;i<arr1.length; i++) 
+	    {
+	    	for(int j=0; j<arr2.length;j++) {
+	    		
+	    		if (arr1[i] == arr2[j]){
+	    			
+	    			result.add(arr1[i]);
+		    		
+		    	}
+	    		
+	    	}
+	    	
+	    }
+	     
+	    System.out.println(result);
+     
    }
 }
 
